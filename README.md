@@ -1,4 +1,6 @@
 # Toy-Problems-Week1
+Author : Bernard Bebeni
+Date : 26 November 2022
 
 Challenge 1: Student Grade Generator (Toy Problem)
 
