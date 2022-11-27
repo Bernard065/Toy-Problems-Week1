@@ -3,7 +3,7 @@
 const prompt = require('prompt-sync')();
 
 //prompt a user to input data
-const marks = prompt('Please a value between 0 and 100: ');
+const marks = parseInt(prompt('Please a value between 0 and 100: '));
 
 //Function to generate student grade
 function studentGradeGenerator() {

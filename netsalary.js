@@ -3,10 +3,13 @@
 const prompt = require('prompt-sync')();
 
 //prompt a user to input basic salary
-const basicSalary = prompt("Please enter your basic salary : ");
+const basicSalary = parseInt(prompt("Please enter your basic salary : "));
 
 //prompts user to imput benefits 
-//const benefits = prompt("Please enter your benefits: ");
+const benefits =parseInt(prompt("Please enter your total benefits: "));
+
+//prompts user to enter pensionable pay
+const pensionablePay = parseInt(prompt("Please enter your pensionable pay: "));
 
 //function to calculate payee
 function payeeCalculator() {
@@ -24,8 +27,11 @@ function payeeCalculator() {
     }
 }
 
+
+//function to calculate NHIF deductions
 function nhifDeductionsCalculator() {
-         
+    
+    //If statements nhif deducated from the basic salary
     if(basicSalary <= 5,999) {
         console.log("Your NHIF deductions are: ", 150);
     }
@@ -96,7 +102,37 @@ function nhifDeductionsCalculator() {
 }
 
 
+//function to calculate gross salary
+function grossSalary() {
+
+    const gross = basicSalary + benefits;
+    console.log("Your Gross Salary is: ", gross);
+
+}
+
+
+//function to calculate nssf deductions
+function nssfDeductionsCalculator() {
+
+    const nssfDeductionsCalculator = pensionablePay / 0.06;
+    console.log("You nssf deductions are: ", nssfDeductionsCalculator);
+
+}
+
+
+//function to calculate net salary
+//function netSalary() {
+
+   // const net = parseInt((basicSalary - payeeCalculator - nssfDeductionsCalculator - nhifDeductionsCalculator) + benefits);
+    //console.log("Your net salary is: ", net);
+//}
+
+
+
 payeeCalculator();
 nhifDeductionsCalculator();
+nssfDeductionsCalculator();
+grossSalary();
+//netSalary();
 
 
