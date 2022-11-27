@@ -7,12 +7,16 @@ Write a function that prompts the user to input student marks. The input should 
         A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
 
 In the Vs code, open the terninal and run node studentgrades.js. It should give you a prompt to enter students marks.
+
+
+```javascript
 ****
 For example 
 
 bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ node studentgrades.js
 Please a value between 0 and 100: 
 ****
+```
 
 
 
@@ -24,6 +28,7 @@ Write a program that takes the speed of a car as input e.g 80. If the speed is l
 
 
 In the Vs code, open the terninal and run node speeddetector.js. It should give you a prompt to enter car speed.
+```javascript
 ****
 For example 
 
@@ -31,6 +36,7 @@ bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ node speeddetector.j
 Please Enter Car Speed: 
 ****
 
+```
 
 
 
