@@ -11,128 +11,156 @@ const benefits =parseInt(prompt("Please enter your total benefits: "));
 //prompts user to enter pensionable pay
 const pensionablePay = parseInt(prompt("Please enter your pensionable pay: "));
 
-//function to calculate payee
-function payeeCalculator() {
-
-    if(basicSalary <= 24,000) {
-        console.log("Your PAYEE is: ", basicSalary * 0.1);
-    }
-
-    else if(basicSalary >= 24,001 && basicSalary <= 32,333){
-        console.log("Your PAYEE is: ", basicSalary * 0.25);
-    }
-
-    else {
-        console.log("Your PAYEE is: ", basicSalary * 0.3)
-    }
-}
-
-
-//function to calculate NHIF deductions
-function nhifDeductionsCalculator() {
-    
-    //If statements nhif deducated from the basic salary
-    if(basicSalary <= 5,999) {
-        console.log("Your NHIF deductions are: ", 150);
-    }
-
-    else if(basicSalary >= 6,000 && basicSalary <= 7,999) {
-        console.log("Your NHIF deductions are: ", 300);
-    }
-
-    else if(basicSalary >= 8,000 && basicSalary <= 11,999) {
-        console.log("Your NHIF deductions are: ", 400);
-    }
-
-    else if(basicSalary >= 12,000 && basicSalary <= 14,999) {
-        console.log("Your NHIF deductions are: ", 500);
-    }
-
-    else if(basicSalary >= 15,000 && basicSalary <= 19,999) {
-        console.log("Your NHIF deductions are: ", 600);
-    }
-
-    else if(basicSalary >= 20,000 && basicSalary <= 24,999) {
-        console.log("Your NHIF deductions are: ", 750);
-    }
-
-    else if(basicSalary >= 25,000 && basicSalary <= 29,999) {
-        console.log("Your NHIF deductions are: ", 850);
-    }
-
-    else if(basicSalary >= 30,000 && basicSalary <= 34,999) {
-        console.log("Your NHIF deductions are: ", 900);
-    }
-
-    else if(basicSalary >= 35,000 && basicSalary <= 39,999) {
-        console.log("Your NHIF deductions are: ", 950);
-    }
-
-    else if(basicSalary >= 40,000 && basicSalary <= 44,999) {
-        console.log("Your NHIF deductions are: ", 1000);
-    }
-
-    else if(basicSalary >= 45,000 && basicSalary <= 49,999) {
-        console.log("Your NHIF deductions are: ", 1,100);
-    }
-
-    else if(basicSalary >= 50,000 && basicSalary <= 59,999) {
-        console.log("Your NHIF deductions are: ", 1,200);
-    }
-
-    else if(basicSalary >= 60,000 && basicSalary <= 69,999) {
-        console.log("Your NHIF deductions are: ", 1,300);
-    }
-
-    else if(basicSalary >= 70,000 && basicSalary <= 79,999) {
-        console.log("Your NHIF deductions are: ", 1,400);
-    }
-
-    else if(basicSalary >= 80,000 && basicSalary <= 89,999) {
-        console.log("Your NHIF deductions are: ", 1,500);
-    }
-
-    else if(basicSalary >= 90,000 && basicSalary <= 99,999) {
-        console.log("Your NHIF deductions are: ", 1,600);
-    }
-
-    else {
-        console.log("Your NHIF deductions are: ", 1,700);
-    }
-}
-
+//declare gross salary
+const gross = parseInt(basicSalary + benefits);
 
 //function to calculate gross salary
 function grossSalary() {
 
-    const gross = basicSalary + benefits;
-    console.log("Your Gross Salary is: ", gross);
-
+    console.log("Your gross salary is: ", gross);
+    
 }
 
+//function to calculate payee
+function payeeCalculator() {
+
+
+    if(basicSalary <= 24,000) {
+        console.log("Your PAYEE is: ", gross * 0.1);
+    }
+
+    else if(gross >= 24,001 && gross <= 32,333){
+        console.log("Your PAYEE is: ", gross * 0.25);
+    }
+
+    else {
+        console.log("Your PAYEE is: ", gross * 0.3)
+    }
+}
+
+
+//function to calculate nhif deductions
+function nhifDeductionsCalculator(salary) {
+
+    //If statement to return nhif monthly deductions
+    if (gross > 100000) {
+      const nhifMonthly = 1700;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    else if (gross >= 90000) {
+      const nhifMonthly = 1600;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 80000) {
+      const nhifMonthly = 1500;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 70000) {
+      const nhifMonthly = 1400;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 60000) {
+      const nhifMonthly = 1300;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 50000) {
+      const nhifMonthly = 1200;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 45000) {
+      const nhifMonthly = 1100;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 40000) {
+      const nhifMonthly = 1000;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 35000) {
+      const nhifMonthly = 950;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 30000) {
+      const nhifMonthly = 900;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 25000) {
+      const nhifMonthly = 850;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 20000) {
+      const nhifMonthly = 750;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 15000) {
+      const nhifMonthly = 600;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 12000) {
+      const nhifMonthly = 500;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 8000) {
+      const nhifMonthly = 400;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 6000) {
+      const nhifMonthly = 300;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross < 5999) {
+      const nhifMonthly = 150;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    }
+  }
 
 //function to calculate nssf deductions
 function nssfDeductionsCalculator() {
 
-    const nssfDeductionsCalculator = pensionablePay / 0.06;
-    console.log("You nssf deductions are: ", nssfDeductionsCalculator);
-
+    const nssf = parseInt(pensionablePay * 0.06);
+    console.log(`Your NSSF Deduction is : ${nssf}`);
 }
 
 
-//function to calculate net salary
-//function netSalary() {
-
-   // const net = parseInt((basicSalary - payeeCalculator - nssfDeductionsCalculator - nhifDeductionsCalculator) + benefits);
-    //console.log("Your net salary is: ", net);
-//}
-
-
-
-payeeCalculator();
-nhifDeductionsCalculator();
-nssfDeductionsCalculator();
+//calling the grossSalary function
 grossSalary();
-//netSalary();
 
+//calling the payeeCalculator
+payeeCalculator();
 
+// calling the nhifDeductionsCalculator function
+nhifDeductionsCalculator();
+
+// calling the nssfDeductaionsCalculator function
+nssfDeductionsCalculator();
