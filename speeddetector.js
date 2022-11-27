@@ -5,7 +5,7 @@ function speedDetector() {
     const prompt = require('prompt-sync')();
 
     //prompt a user to input data
-    const speed = prompt("Please Enter Car Speed: ");
+    const speed = parseInt(prompt("Please Enter Car Speed: "));
 
     //declaring variables
     const speedLimit = 70;

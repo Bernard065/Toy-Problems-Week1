@@ -47,8 +47,9 @@ https://www.aren.co.ke/payroll/taxrates.htm
 https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
 
 
-In the Vs code, open the terninal and run node netsalary.js. It should give you a prompt to enter basic salary, total benefits and pensionable. It the calculates and outputs the PAYEE, NHIF deductions, NSSF deductions, Gross Salary and Net Salary.
+In the Vs code, open the terninal and run node netsalary.js. It should give you a prompt to enter basic salary, total benefits and pensionable. It the calculates and outputs the PAYEE, NHIF deductions, NSSF deductions, Gross Salary.
 
+```javascript
 For example 
 
 ****bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ node netsalary.js
@@ -60,3 +61,4 @@ Your NHIF deductions are:  150
 You nssf deductions are:  107383.33333333334
 Your Gross Salary is:  674776981
 bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ ****
+```
