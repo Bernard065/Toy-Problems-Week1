@@ -153,6 +153,14 @@ function nssfDeductionsCalculator() {
 }
 
 
+//function to calculate net salary
+function netSalary() {
+    const payee = payeeCalculator(gross);
+    const nssf = nssfDeductionsCalculator(gross);
+    const nhif = nhifDeductionsCalculator(gross);
+    const net = gross -payee -nssf -nhif;
+    console.log("You Net Salary is: ", net)
+}
 //calling the grossSalary function
 grossSalary();
 
@@ -164,3 +172,6 @@ nhifDeductionsCalculator();
 
 // calling the nssfDeductaionsCalculator function
 nssfDeductionsCalculator();
+
+//calling the net salary function
+netSalary();
