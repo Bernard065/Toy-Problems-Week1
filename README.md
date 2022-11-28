@@ -1,110 +1,177 @@
-# Toy-Problems-Week1
 
-Author : Bernard Bebeni
-Date : 26 November 2022
+//Return an instance of the prompt function
+const prompt = require('prompt-sync')();
 
+//prompt a user to input basic salary
+const basicSalary = parseInt(prompt("Please enter your basic salary : "));
 
-Challenge 1: Student Grade Generator (Toy Problem)
+//prompts user to imput benefits 
+const benefits =parseInt(prompt("Please enter your total benefits: "));
 
-Write a function that prompts the user to input student marks. The input should be between 0 and 100. The output should correspond the correct grade, as shown below: 
+//prompts user to enter pensionable pay
+const pensionablePay = parseInt(prompt("Please enter your pensionable pay: "));
 
-        A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
+//declare gross salary
+const gross = parseInt(basicSalary + benefits);
 
-For our program to prompt the user to input the **student score,** we will install the prompt-syn node module using `
-npm install prompt-sync
+//function to calculate gross salary
+function grossSalary() {
 
-```javascript
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ npm install prompt-sync
+    console.log("Your gross salary is: ", gross);
+    
+}
 
-added 3 packages, and audited 4 packages in 3s
-
-found 0 vulnerabilities
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ 
-
-```
-In the Vs code, open the terminal and run node studentgrades.js. It should give you a prompt to enter students marks.
-
-
-```javascript
-****
-For example 
-
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ node studentgrades.js
-Please a value between 0 and 100: 
-****
-```
+//function to calculate payee
+function payeeCalculator() {
 
 
+    if(basicSalary <= 24,000) {
+        console.log("Your PAYEE is: ", gross * 0.1);
+    }
 
-Challenge 2: Speed Detector (Toy Problem)
+    else if(gross >= 24,001 && gross <= 32,333){
+        console.log("Your PAYEE is: ", gross * 0.25);
+    }
 
-Write a program that takes the speed of a car as input e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
-
-   > For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
-
-For our program to prompt the user to input the **car speed,** we will install the prompt-syn node module using `
-npm install prompt-sync
-
-```javascript
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ npm install prompt-sync
-
-added 3 packages, and audited 4 packages in 3s
-
-found 0 vulnerabilities
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ 
-
-```
-
-In the Vs code, open the terninal and run node speeddetector.js. It should give you a prompt to enter **car speed**.
-```javascript
-****
-For example 
-
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ node speeddetector.js
-Please Enter Car Speed: 
-****
-
-```
+    else {
+        console.log("Your PAYEE is: ", gross * 0.3)
+    }
+}
 
 
+//function to calculate nhif deductions
+function nhifDeductionsCalculator(salary) {
 
-Challenge 3: Net Salary Calculator (Toy Problem)
+    //If statement to return nhif monthly deductions
+    if (gross > 100000) {
+      const nhifMonthly = 1700;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    else if (gross >= 90000) {
+      const nhifMonthly = 1600;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 80000) {
+      const nhifMonthly = 1500;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 70000) {
+      const nhifMonthly = 1400;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 60000) {
+      const nhifMonthly = 1300;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 50000) {
+      const nhifMonthly = 1200;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 45000) {
+      const nhifMonthly = 1100;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 40000) {
+      const nhifMonthly = 1000;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 35000) {
+      const nhifMonthly = 950;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 30000) {
+      const nhifMonthly = 900;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 25000) {
+      const nhifMonthly = 850;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 20000) {
+      const nhifMonthly = 750;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 15000) {
+      const nhifMonthly = 600;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 12000) {
+      const nhifMonthly = 500;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 8000) {
+      const nhifMonthly = 400;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross >= 6000) {
+      const nhifMonthly = 300;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    } 
+    
+    else if (gross < 5999) {
+      const nhifMonthly = 150;
+      console.log(`Your NHIF Deduction is: ${nhifMonthly}`);
+      return nhifMonthly;
+    }
+  }
 
-Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIF Deductions, NSSF Deductions, gross salary, and net salary. 
+//function to calculate nssf deductions
+function nssfDeductionsCalculator() {
 
-NB: Use KRA, NHIF, and NSSF values provided in the link below.
+    const nssf = parseInt(pensionablePay * 0.06);
+    console.log(`Your NSSF Deduction is : ${nssf}`);
+}
 
-https://www.aren.co.ke/payroll/taxrates.htm 
 
-https://www.aren.co.ke/payroll/taxrates.htm
+//function to calculate net salary
+function netSalary() {
+    const payee = payeeCalculator(gross);
+    const nssf = nssfDeductionsCalculator(gross);
+    const nhif = nhifDeductionsCalculator(gross);
+    const net = gross -payee -nssf -nhif;
+    console.log("You Net Salary is: ", net)
+}
+//calling the grossSalary function
+grossSalary();
 
-https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
+//calling the payeeCalculator
+payeeCalculator();
 
-For our program to prompt the user to input **their basic salary, benefits and pensionable pay** we will install the prompt-syn node module using `
-npm install prompt-sync
+// calling the nhifDeductionsCalculator function
+nhifDeductionsCalculator();
 
-```javascript
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ npm install prompt-sync
+// calling the nssfDeductaionsCalculator function
+nssfDeductionsCalculator();
 
-added 3 packages, and audited 4 packages in 3s
-
-found 0 vulnerabilities
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ 
-
-```
-
-In the Vs code, open the terninal and run node netsalary.js. It should give you a prompt to enter basic salary, total benefits and pensionable. It the calculates and outputs the PAYEE, NHIF deductions, NSSF deductions, Gross Salary.
-
-```javascript
-For example 
-
-****bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ node netsalary.js
-Please enter your basic salary : 674764747
-Please enter your total benefits: 12234
-Please enter your pensionable pay: 6443
-Your PAYEE is:  168691186.75
-Your NHIF deductions are:  150
-You nssf deductions are:  107383.33333333334
-Your Gross Salary is:  674776981
-bebeni@bebeni-840-G4:~/Development/code/Toy-Problems-Week1$ ****
-```
+//calling the net salary function
+netSalary();
