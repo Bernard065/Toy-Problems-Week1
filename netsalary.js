@@ -25,7 +25,7 @@ function grossSalary() {
 function payeeCalculator() {
 
 
-    if(gross <= 24,000) {
+    if(basicSalary <= 24,000) {
         console.log("Your PAYEE is: ", gross * 0.1);
     }
 
@@ -40,7 +40,7 @@ function payeeCalculator() {
 
 
 //function to calculate nhif deductions
-function nhifDeductionsCalculator() {
+function nhifDeductionsCalculator(salary) {
 
     //If statement to return nhif monthly deductions
     if (gross > 100000) {
@@ -152,17 +152,15 @@ function nssfDeductionsCalculator() {
     console.log(`Your NSSF Deduction is : ${nssf}`);
 }
 
+
 //function to calculate net salary
 function netSalary() {
-    const payee = parseInt(payeeCalculator(gross));
-    const nssf = parseInt(nssfDeductionsCalculator(gross));
-    const nhif = parseInt(nhifDeductionsCalculator(gross));
-    const net = parseInt(gross -payee -nssf -nhif);
+    const payee = payeeCalculator(gross);
+    const nssf = nssfDeductionsCalculator(gross);
+    const nhif = nhifDeductionsCalculator(gross);
+    const net = gross -payee -nssf -nhif;
     console.log("You Net Salary is: ", net)
 }
-
-
-
 //calling the grossSalary function
 grossSalary();
 
