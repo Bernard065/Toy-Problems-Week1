@@ -86,4 +86,4 @@ In the Vs code, open the terninal and run node netsalary.js. It should give you 
 ```javascript
 For example 
 
-In the Toy-Problems-Week1 directory, cd to netSalary calculator directory using the cd netSalary calculator command and then run node netSalary.js and enter your gross monthly salary
+In the Toy-Problems-Week1 directory, cd to netSalary calculator directory using the cd netSalary calculator command and then run node netSalary.js and enter your gross monthly salary# Toy-Problems-Week1
